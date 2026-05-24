@@ -1,0 +1,37 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding: 0; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+a, button { -webkit-tap-highlight-color: transparent; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile responsive helpers */
+@media (max-width: 767px) {
+  .desktop-only { display: none !important; }
+  .mobile-stack { flex-direction: column !important; }
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+}
+@media (min-width: 768px) {
+  .mobile-only { display: none !important; }
+  .desktop-arrow { display: block !important; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 99px; }
