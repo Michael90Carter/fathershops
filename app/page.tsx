@@ -555,7 +555,7 @@ export default function HomePage() {
               ✓ Thanks! We'll be in touch soon.
             </div>
           ) : (
-            <div style={{ display:"flex", gap:0, maxWidth:440, margin:"0 auto", flexWrap:"wrap", gap:8 }}>
+            <div style={{ display:"flex", maxWidth:440, margin:"0 auto", flexWrap:"wrap", gap:8 }}>
               <input type="email" value={email} onChange={e => setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 style={{ flex:"1 1 200px", padding:"15px 20px", border:"1px solid rgba(255,255,255,.2)", background:"rgba(255,255,255,.06)", color:WHITE, fontSize:14, outline:"none" }}/>
